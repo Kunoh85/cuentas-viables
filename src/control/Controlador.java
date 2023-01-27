@@ -48,7 +48,7 @@ public class Controlador implements ActionListener{
             Integer resultado = arm.getVolumen()*arm.getConcentracion();
             resultado= resultado/conc.getConcentracion();
             
-            JOptionPane.showMessageDialog(ventana, ventana.getCarbVolConc());
+         
         }    
     }
     
