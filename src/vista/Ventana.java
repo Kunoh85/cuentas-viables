@@ -383,6 +383,7 @@ public class Ventana extends javax.swing.JFrame {
         jLabel9.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel9.setPreferredSize(new java.awt.Dimension(200, 40));
 
+        carbVolConcentrado.setEditable(false);
         carbVolConcentrado.setBackground(new java.awt.Color(235, 234, 202));
         carbVolConcentrado.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
         carbVolConcentrado.setMinimumSize(new java.awt.Dimension(50, 22));

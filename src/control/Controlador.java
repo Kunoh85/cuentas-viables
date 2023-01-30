@@ -42,21 +42,13 @@ public class Controlador implements ActionListener{
             Integer.valueOf(ventana.getCarbVolConc().getText()),
             Integer.valueOf(ventana.getCarbConcentrado().getText()));
             
-            Integer resultado = arm.getVolumen()*arm.getConcentracion();
-            resultado= resultado/conc.getConcentracion();            
-                        
+            Integer resultado = (arm.getVolumen()*arm.getConcentracion()-arm.getVolumen()*
+                    Integer.valueOf(ventana.getCarbPrevia().getText()))/
+                    conc.getConcentracion();
+                                   
             ventana.getCarbVolConcentrado().setText(Integer.toString(resultado));         
          
-        }  
+        }   
     }
-    
-    public void  calcular(){
-        
-    }
-
-    private JTextField toString(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-        
     
 }
