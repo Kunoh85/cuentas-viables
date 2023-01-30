@@ -7,6 +7,7 @@ package control;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 import modelos.Armado;
 import modelos.Concentrado;
 import vista.Ventana;
@@ -17,13 +18,9 @@ import vista.Ventana;
  */
 public class Controlador implements ActionListener{
     
-    Concentrado concentrado;
-    Armado armado;
     Ventana ventana;
 
-    public Controlador() {
-        this.concentrado =  new Concentrado();
-        this.armado = new Armado();
+    public Controlador() {      
         this.ventana = new Ventana();
     }
     
@@ -38,22 +35,27 @@ public class Controlador implements ActionListener{
         if(e.getSource().equals(ventana.getBotonCalcular())){
             
             Armado arm = new Armado(
-            Integer.parseInt(ventana.getCarbVolReactor().getText()),
-            Integer.parseInt(ventana.getCarbTeorica().getText()));
+            Integer.valueOf(ventana.getCarbVolReactor().getText()),
+            Integer.valueOf(ventana.getCarbTeorica().getText()));
             
             Concentrado conc = new Concentrado(
-            Integer.parseInt(ventana.getCarbVolConc().getText()),
-            Integer.parseInt(ventana.getCarbConcentrado().getText()));
+            Integer.valueOf(ventana.getCarbVolConc().getText()),
+            Integer.valueOf(ventana.getCarbConcentrado().getText()));
             
             Integer resultado = arm.getVolumen()*arm.getConcentracion();
-            resultado= resultado/conc.getConcentracion();
-            
+            resultado= resultado/conc.getConcentracion();            
+                        
+            ventana.getCarbVolConcentrado().setText(Integer.toString(resultado));         
          
-        }    
+        }  
     }
     
     public void  calcular(){
         
+    }
+
+    private JTextField toString(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
         
     

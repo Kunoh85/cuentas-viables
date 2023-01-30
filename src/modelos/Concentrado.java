@@ -16,5 +16,23 @@ public class Concentrado extends Solucion{
 
     public Concentrado() {
     }
+
+    public Integer getVolumen() {
+        return volumen;
+    }
+
+    public void setVolumen(Integer volumen) {
+        this.volumen = volumen;
+    }
+
+    public Integer getConcentracion() {
+        return concentracion;
+    }
+
+    public void setConcentracion(Integer concentracion) {
+        this.concentracion = concentracion;
+    }
+    
+    
         
 }
